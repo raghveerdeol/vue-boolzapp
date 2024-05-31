@@ -53,6 +53,7 @@ input{
     margin: .5rem auto;
     border: none;
     border-radius: 4px;
+    padding: .25rem;
 }
 .contacts{
     display: flex;
@@ -65,6 +66,8 @@ main{
 }
 #messagge-view{
     width: calc(100vw - 350px);
+    height: 100vh;
+    overflow: scroll;
 }
 .active-contact{
     background-color: #eaeaea;
@@ -85,4 +88,10 @@ main{
 }
 .contact-icons{
     
+}
+.bg-green{
+    background-color: green;
+}
+.bg-white{
+    background-color: white;
 }
