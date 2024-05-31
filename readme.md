@@ -18,9 +18,12 @@ Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visua
 
 
 
-Milestone 2
+<!-- Milestone 2
 Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
-Click sul contatto mostra la conversazione del contatto cliccato
+Click sul contatto mostra la conversazione del contatto cliccato -->
+-aggiungere una variabile x;
+-creare funzone x = index;
+-aggiungere la funzione al elemento li dei contatti che al click diventa x = index del elemento cliccato
 
 
 Milestone 3

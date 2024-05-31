@@ -174,8 +174,8 @@ createApp({
     }
     },
     methods: {
-        // select: function (contactIndex) {
-        //     this.x = contactIndex;
-        // } 
+        select: function (contactIndex) {
+            this.x = contactIndex;
+        } 
     },
 }).mount('#app')
