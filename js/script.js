@@ -186,9 +186,18 @@ createApp({
             };
             this.contacts[this.x].messages.push(createMsg);
             this.clearInput();
+            setTimeout(this.autoRisposta, 1000);
+        },
+        autoRisposta: function() {
+            const autoMsg  = {
+                date: '10/01/2020 15:51:00',
+                message: 'OK!!',
+                status: 'received'
+            };
+            this.contacts[this.x].messages.push(autoMsg);
         },
         clearInput: function () {
             this.newMessage = '';
-        }
+        },
     },
 }).mount('#app')
