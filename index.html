@@ -52,7 +52,7 @@
                 <section class="message">
                     <ul>
                         <li v-for="(sms, index) in contacts[x].messages" key="index">
-                            <p :class="sms.status === 'sent' ? 'bg-green' : 'bg-white' ">{{sms.message}}</p>
+                            <p :class="sms.status === 'sent' ? 'bg-green' : 'bg-white' " class="sms">{{sms.message}}</p>
                         </li>
                     </ul>
                 </section>
