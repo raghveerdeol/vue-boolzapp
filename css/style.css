@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+main{
+    background-color: antiquewhite;
+}
+nav{
+    width: 35vw;
+    height: 100vh;
+    background-color: aqua;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#user{
+    display: flex;
+    justify-content: space-between;
+    background-color: #eaeaea;
+}
+.user-id{
+    display: flex;
+    width: 75%;
+    margin-bottom: .5rem;
+}
+.avatar{
+    width: 20%;
+    border-radius: 50%;
+}
+.name{
+    width: calc(100% / 2);
+    align-self: center;
+}
+.user-icons{
+    width: 25%;
+    display: flex;
+    align-self: center;
+}
+.icons-space{
+    width: calc(100% / 3);
+}
+input{
+    width: 90%;
+    margin: .5rem auto;
+}

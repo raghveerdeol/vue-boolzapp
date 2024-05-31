@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -14,17 +17,25 @@
 <main>
     <nav>
         <article id="user">
-            <div class="user">
-                <p class="name">{{user.name}}</p>
+            <div class="user-id">
                 <img :src="user.avatar" :alt="user.name" class="avatar">
+                <p class="name">{{user.name}}</p>
             </div>
             <div class="user-icons">
-                <i class="fa-solid fa-circle-notch"></i>
-                <i class="fa-solid fa-message"></i>
-                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-solid fa-circle-notch icons-space"></i>
+                <i class="fa-solid fa-message icons-space"></i>
+                <i class="fa-solid fa-ellipsis-vertical icons-space"></i>
             </div>
         </article>
-        
+        <input type="text">
+        <article id="contacts">
+            <ul>
+                <li v-for="(contact, index) in contacts" class="user-id contacts">
+                    <img :src="contact.avatar" :alt="contact.name" class="avatar">
+                    <p class="name">{{contact.name}}</p>
+                </li>
+            </ul>
+        </article>
     </nav>
 </main>
 
