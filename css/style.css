@@ -10,7 +10,7 @@ body{
 main{
     background-color: antiquewhite;
 }
-nav{
+.nav-contacts{
     width: 350px;
     height: 100vh;
     background-color:  #eaeaea;
@@ -59,4 +59,30 @@ input{
     padding: 10px;
     border-bottom: 1px solid  #eaeaea;
     background-color: white;
+}
+main{
+    display: flex;
+}
+#messagge-view{
+    width: calc(100vw - 350px);
+}
+.active-contact{
+    background-color: #eaeaea;
+    height: 76.5px;
+    width: 100%;
+    border-left: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.active-contact > div{
+    display: flex;
+}
+.active-avatar{
+    width: 65px;
+    border-radius: 50%;
+    margin: 0 1rem;
+}
+.contact-icons{
+    
 }
