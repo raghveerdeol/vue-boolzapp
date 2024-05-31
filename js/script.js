@@ -179,14 +179,16 @@ createApp({
             this.x = contactIndex;
         },
         sentMessage: function () {
-            const createMsg = {
-                date: '10/01/2020 15:51:00',
-                message: this.newMessage,
-                status: 'sent'
-            };
-            this.contacts[this.x].messages.push(createMsg);
-            this.clearInput();
-            setTimeout(this.autoRisposta, 1000);
+            if (this.newMessage.length > 0 && this.newMessage.trim()) {
+                const createMsg = {
+                    date: '10/01/2020 15:51:00',
+                    message: this.newMessage,
+                    status: 'sent'
+                };
+                this.contacts[this.x].messages.push(createMsg);
+                this.clearInput();
+                setTimeout(this.autoRisposta, 1000);
+            }
         },
         autoRisposta: function() {
             const autoMsg  = {
