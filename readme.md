@@ -1,7 +1,23 @@
 Nome Repo: vue-boolzapp
-Milestone 1
+<!-- Milestone 1
 Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) e dall’interlocutore (bianco) assegnando due classi CSS diverse
-Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
+Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto -->
+-creo div#app nel html
+-inserisco vue in js e aggiungo data() contacts;
+-nel html creo un article user in cui inserissco i dati del utente attraverso vue creando nel file js un array con dati utente;
+-creo li con ciclo v-for conatct in contacts;
+-al interno del ciclo inserisco un tag img che richiama la propriètà avatar nel :src per visualizzare l'immagine del contatto;
+-sempre al interno del ciclo inserisco un tag p per visualizzare il nome utente;
+
+- al esterno del ciclo creo un article per visualizzare i mesaggi;
+- al interno creo p che hanno come contenuto il contenuto di message di messages;
+- se nel array messages la proprietà status è = a sent aggiungo classe bg-green, se è = a  received aggiungo classe bg-white;
+- creo una variabile x = 0;
+- al click su li contact x = index del li;
+- visuallizzo i messaggi relativa al indice x; 
+
+
+
 Milestone 2
 Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
 Click sul contatto mostra la conversazione del contatto cliccato
