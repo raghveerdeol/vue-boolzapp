@@ -33,8 +33,13 @@ Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente r
 
 
 
-Milestone 4
-Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+<!-- Milestone 4
+Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina) -->
+-creo una variabile search vuota;
+-la collego al input con v-model;
+-creo una funzione in cui trasformo search in un array con split;
+-se contact.name non contiene searchContact applico la classe none
+
 Milestone 5 - opzionale
 Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 
