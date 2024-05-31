@@ -90,6 +90,9 @@ main{
 .contact-icons{
     
 }
+.message{
+    height: calc(100vh - 150px);
+}
 .sms{
     width: 325px;
     position: relative;
@@ -99,10 +102,18 @@ main{
     border-radius: 20px;
 }
 .bg-green{
-    background-color: green;
+    background-color: #d5f9ba;
     left: 735px;
 }
 .bg-white{
     background-color: white;
     left: 115px;
+}
+.input-msg{
+    height: 40px;
+    background-color: #f3eeea;
+}
+.input-msg > i{
+    width: 4%;
+    text-align: center;
 }
