@@ -171,11 +171,24 @@ createApp({
             }
         ],
         x: 0,
+        newMessage: '',
     }
     },
     methods: {
         select: function (contactIndex) {
             this.x = contactIndex;
         },
+        sentMessage: function () {
+            const createMsg = {
+                date: '10/01/2020 15:51:00',
+                message: this.newMessage,
+                status: 'sent'
+            };
+            this.contacts[this.x].messages.push(createMsg);
+            this.clearInput();
+        },
+        clearInput: function () {
+            this.newMessage = '';
+        }
     },
 }).mount('#app')

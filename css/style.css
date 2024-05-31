@@ -92,6 +92,7 @@ main{
 }
 .message{
     height: calc(100vh - 150px);
+    overflow: scroll;
 }
 .sms{
     width: 325px;

@@ -58,7 +58,7 @@
                 </section>
                 <section class="input-msg">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text">
+                    <input type="text" v-model="newMessage" @keyup.enter="sentMessage()">
                     <i class="fa-solid fa-microphone"></i>
                 </section>
             </section>
