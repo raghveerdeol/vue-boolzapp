@@ -172,6 +172,7 @@ createApp({
         ],
         x: 0,
         newMessage: '',
+        search: '',
     }
     },
     methods: {
@@ -200,6 +201,9 @@ createApp({
         },
         clearInput: function () {
             this.newMessage = '';
+        },
+        searchContact: function () {
+            return searchChar = this.search.split()
         },
     },
 }).mount('#app')
