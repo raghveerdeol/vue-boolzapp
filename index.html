@@ -28,7 +28,7 @@
                     </div>
                 </article>
                 <input type="text" v-model="search" @keyup="searchContact">
-                <article id="contacts">
+                <article id="contacts-article">
                     <ul>
                         <li v-for="(contact, index) in contacts" @click="select(index)" class="contacts" key="index" :class="contact.name.includes(searchContact()) ? '' : 'none'">
                             <img :src="contact.avatar" :alt="contact.name" class="avatar">
@@ -52,7 +52,12 @@
                 <section class="message">
                     <ul>
                         <li v-for="(sms, index) in contacts[x].messages" key="index">
-                            <p :class="sms.status === 'sent' ? 'bg-green' : 'bg-white' " class="sms">{{sms.message}}</p>
+                            <p :class="sms.status === 'sent' ? 'bg-green' : 'bg-white' " class="sms">
+                                {{sms.message}}
+                                <select name="delete-msg" id="delete-msg">
+                                    <option value="delete" @click="deleteMsg(index)">delete</option>
+                                </select>
+                            </p>
                         </li>
                     </ul>
                 </section>

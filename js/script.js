@@ -205,5 +205,8 @@ createApp({
         searchContact: function () {
             return searchChar = this.search.split()
         },
+        deleteMsg: function (messageindex) {
+            this.contacts[this.x].messages.splice(messageindex,1)
+        }
     },
 }).mount('#app')
