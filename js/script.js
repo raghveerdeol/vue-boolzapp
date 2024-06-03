@@ -173,6 +173,7 @@ createApp({
         x: 0,
         newMessage: '',
         search: '',
+        lastMessage: '',
     }
     },
     methods: {
@@ -208,5 +209,9 @@ createApp({
         deleteMsg: function (messageindex) {
             this.contacts[this.x].messages.splice(messageindex,1)
         },
+        lastMsg: function (contact) {
+            const msg = contact.messages.slice(-1);
+            return msg;
+        }
     },
 }).mount('#app')

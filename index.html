@@ -33,6 +33,10 @@
                         <li v-for="(contact, index) in contacts" @click="select(index)" class="contacts" key="index" :class="contact.name.includes(searchContact()) ? '' : 'none'">
                             <img :src="contact.avatar" :alt="contact.name" class="avatar">
                             <p class="name">{{contact.name}}</p>
+                            <p>
+                                {{lastMsg(contact)}}
+                            </p>
+                    
                         </li>
                     </ul>
                 </article>
