@@ -105,6 +105,8 @@ main{
     border: none;
     border-radius: 20px;
     word-wrap: anywhere;
+    display: flex;
+    justify-content: space-between;
 }
 .bg-green{
     background-color: #d5f9ba;
@@ -124,4 +126,13 @@ main{
 }
 .none{
     display: none;
+}
+.dropdown{
+    visibility: hidden;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 9px;
+}
+.sms:hover .dropdown{
+    visibility: visible;
 }

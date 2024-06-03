@@ -207,6 +207,6 @@ createApp({
         },
         deleteMsg: function (messageindex) {
             this.contacts[this.x].messages.splice(messageindex,1)
-        }
+        },
     },
 }).mount('#app')

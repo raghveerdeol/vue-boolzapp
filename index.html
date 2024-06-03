@@ -54,7 +54,7 @@
                         <li v-for="(sms, index) in contacts[x].messages" key="index">
                             <p :class="sms.status === 'sent' ? 'bg-green' : 'bg-white' " class="sms">
                                 {{sms.message}}
-                                <select name="delete-msg" id="delete-msg">
+                                <select name="" id="" class="dropdown" >
                                     <option value="delete" @click="deleteMsg(index)">delete</option>
                                 </select>
                             </p>
