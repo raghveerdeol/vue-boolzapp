@@ -174,6 +174,7 @@ createApp({
         newMessage: '',
         search: '',
         lastMessage: '',
+        
     }
     },
     methods: {
@@ -212,6 +213,13 @@ createApp({
         lastMsg: function (contact) {
             const [msg] = contact.messages.slice(-1);
             return msg.message;
+        },
+        time: function (contact) {
+            let time = '';
+            contact.forEach((element, index) => {
+                time = element.date.slice(11, 16)
+            });
+            return time;
         }
     },
 }).mount('#app')

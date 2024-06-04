@@ -38,6 +38,7 @@
                                     {{lastMsg(contact)}}
                                 </p>
                             </div>
+                            <p class="time">{{time(contact.messages)}}</p>
                         </li>
                     </ul>
                 </article>
@@ -46,7 +47,10 @@
                 <nav class="active-contact">
                     <div>
                         <img :src="contacts[x].avatar" :alt="contacts[x].name" class="active-avatar">
-                        <p class="name">{{contacts[x].name}}</p>
+                        <div class="active-time">
+                            <p>{{contacts[x].name}}</p>
+                            <p class="last-msg">Ultimo accesso oggi alle: {{time(contacts[x].messages)}}</p>
+                        </div>
                     </div>
                     <div class="contact-icons">
                         <i class="fa-solid fa-circle-notch icons-space"></i>
@@ -57,12 +61,16 @@
                 <section class="message">
                     <ul>
                         <li v-for="(sms, index) in contacts[x].messages" key="index">
-                            <p :class="sms.status === 'sent' ? 'bg-green' : 'bg-white' " class="sms">
-                                {{sms.message}}
-                                <select name="" id="" class="dropdown" >
-                                    <option value="delete" @click="deleteMsg(index)">delete</option>
-                                </select>
-                            </p>
+                            <div :class="sms.status === 'sent' ? 'bg-green' : 'bg-white' " class="sms">
+                                <p class="msg-text">{{sms.message}}</p>
+                                <span class="msg-time">
+                                    <select name="" id="" class="dropdown" >
+                                        <option value="delete" @click="deleteMsg(index)">delete</option>
+                                    </select>
+                                    <span class="time">{{time(contacts[x].messages)}}</span>
+
+                                </span>
+                            </div>
                         </li>
                     </ul>
                 </section>
