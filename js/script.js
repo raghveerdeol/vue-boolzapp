@@ -210,8 +210,8 @@ createApp({
             this.contacts[this.x].messages.splice(messageindex,1)
         },
         lastMsg: function (contact) {
-            const msg = contact.messages.slice(-1);
-            return msg;
+            const [msg] = contact.messages.slice(-1);
+            return msg.message;
         }
     },
 }).mount('#app')
