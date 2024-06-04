@@ -220,6 +220,9 @@ createApp({
                 time = element.date.slice(11, 16)
             });
             return time;
+        },
+        msgTime: function (contact) {
+                return  contact.slice(11, 16);
         }
     },
 }).mount('#app')
