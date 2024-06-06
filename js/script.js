@@ -184,7 +184,7 @@ createApp({
         sentMessage: function () {
             if (this.newMessage.length > 0 && this.newMessage.trim()) {
                 const createMsg = {
-                    date: '10/01/2020 15:51:00',
+                    date: new Date().toLocaleDateString("en-GB") + " " + new Date().toLocaleTimeString('it-IT') ,
                     message: this.newMessage,
                     status: 'sent'
                 };
@@ -195,7 +195,7 @@ createApp({
         },
         autoRisposta: function() {
             const autoMsg  = {
-                date: '10/01/2020 15:51:00',
+                date: new Date().toLocaleDateString("en-GB") + " " + new Date().toLocaleTimeString('it-IT') ,
                 message: 'OK!!',
                 status: 'received'
             };
